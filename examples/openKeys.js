@@ -1,26 +1,26 @@
 /* eslint no-console:0 */
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Menu, { SubMenu, Item as MenuItem } from 'rc-menu';
+import React from "react";
+import ReactDOM from "react-dom";
+import Menu, { SubMenu, Item as MenuItem } from "rc-menu";
 
-import 'rc-menu/assets/index.less';
+import "rc-menu/assets/index.less";
 
 class Test extends React.Component {
   state = {
-    openKeys: [],
+    openKeys: []
   };
 
   onClick(info) {
-    console.log('click ', info);
+    console.log("click ", info);
   }
 
-  onOpenChange = (openKeys) => {
-    console.log('onOpenChange', openKeys);
+  onOpenChange = openKeys => {
+    console.log("onOpenChange", openKeys);
     this.setState({
-      openKeys,
+      openKeys
     });
-  }
+  };
 
   getMenu() {
     return (
@@ -44,10 +44,12 @@ class Test extends React.Component {
   }
 
   render() {
-    return (<div>
-      <div style={{ width: 400 }}>{this.getMenu()}</div>
-    </div>);
+    return (
+      <div>
+        <div style={{ width: 400 }}>{this.getMenu()}</div>
+      </div>
+    );
   }
 }
 
-ReactDOM.render(<Test />, document.getElementById('__react-content'));
+ReactDOM.render(<Test />, document.getElementById("__react-content"));

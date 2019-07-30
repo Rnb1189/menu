@@ -2,25 +2,12 @@
    "name": "rc-menu",
    "version": "7.4.23",
    "description": "menu ui component for react",
-   "keywords": [
-      "react",
-      "react-component",
-      "menu",
-      "ui",
-      "react-menu"
-   ],
-   "files": [
-      "es",
-      "lib",
-      "assets/*.css"
-   ],
+   "keywords": ["react", "react-component", "menu", "ui", "react-menu"],
+   "files": ["es", "lib", "assets/*.css"],
    "main": "./lib/index",
    "module": "./es/index",
    "homepage": "http://github.com/react-component/menu",
-   "maintainers": [
-      "yiminghe@gmail.com",
-      "hualei5280@gmail.com"
-   ],
+   "maintainers": ["yiminghe@gmail.com", "hualei5280@gmail.com"],
    "repository": {
       "type": "git",
       "url": "git@github.com:react-component/menu.git"
@@ -39,21 +26,16 @@
       "start": "rc-tools run server",
       "start:preact": "DEMO_ENV=preact rmc-tools run server",
       "pub": "rc-tools run pub --babel-runtime",
+      "lint": "rc-tools run lint",
       "lint:fix": "rc-tools run lint --fix",
       "test": "jest",
       "prepublish": "rc-tools run guard",
       "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls"
    },
    "jest": {
-      "setupFiles": [
-         "./tests/setup.js"
-      ],
-      "collectCoverageFrom": [
-         "src/**/*"
-      ],
-      "snapshotSerializers": [
-         "enzyme-to-json/serializer"
-      ],
+      "setupFiles": ["./tests/setup.js"],
+      "collectCoverageFrom": ["src/**/*"],
+      "snapshotSerializers": ["enzyme-to-json/serializer"],
       "transform": {
          "\\.jsx?$": "./node_modules/rc-tools/scripts/jestPreprocessor.js"
       }
@@ -84,7 +66,5 @@
       "rc-util": "^4.1.0",
       "resize-observer-polyfill": "^1.5.0"
    },
-   "pre-commit": [
-      "lint"
-   ]
+   "pre-commit": ["lint"]
 }
