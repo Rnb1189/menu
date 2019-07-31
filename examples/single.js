@@ -2,8 +2,8 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
-import Menu, { SubMenu, Item as MenuItem, Divider } from "rc-menu";
-import "rc-menu/assets/index.less";
+import Menu, { SubMenu, Item as MenuItem, Divider } from "rnb-rc-menu";
+import "rnb-rc-menu/assets/index.less";
 
 function handleSelect(info) {
   console.log("selected ", info);

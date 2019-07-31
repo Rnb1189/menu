@@ -518,7 +518,11 @@ export class SubMenu extends React.Component {
          <div
             ref={this.saveSubMenuTitle}
             style={style}
-            className={`${prefixCls}-title`}
+            // className={`${prefixCls}-title`}
+            //NEw:
+            className={`${prefixCls}-title ${
+               this.props.isRtl ? "a-rtl" : "a-ltr"
+            }`}
             {...titleMouseEvents}
             {...titleClickEvents}
             aria-expanded={isOpen}

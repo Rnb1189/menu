@@ -2,9 +2,9 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
-import Menu, { SubMenu, Item as MenuItem } from "rc-menu";
+import Menu, { SubMenu, Item as MenuItem } from "rnb-rc-menu";
 
-import "rc-menu/assets/index.less";
+import "rnb-rc-menu/assets/index.less";
 
 class Test extends React.Component {
   state = {
