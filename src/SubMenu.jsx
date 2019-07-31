@@ -24,6 +24,14 @@ const popupPlacementMap = {
    "vertical-right": "leftTop"
 };
 
+//NEw:
+const popupPlacementMap_rtl = {
+   horizontal: "bottomLeft",
+   vertical: "leftTop",
+   "vertical-left": "rightTop",
+   "vertical-right": "leftTop"
+};
+
 const updateDefaultActiveFirst = (store, eventKey, defaultActiveFirst) => {
    const menuId = getMenuIdFromSubMenuEventKey(eventKey);
    const state = store.getState();
@@ -357,6 +365,7 @@ export class SubMenu extends React.Component {
    renderChildren(children) {
       const props = this.props;
       const baseProps = {
+         isRtl: this.props.isRtl,
          mode: props.mode === "horizontal" ? "vertical" : props.mode,
          visible: this.props.isOpen,
          level: props.level + 1,
@@ -437,6 +446,10 @@ export class SubMenu extends React.Component {
       const prefixCls = this.getPrefixCls();
       const isInlineMode = props.mode === "inline";
       const className = classNames(prefixCls, `${prefixCls}-${props.mode}`, {
+         //NEw:
+         "a-rtl": this.props.isRtl,
+         "a-ltr": !this.props.isRtl,
+
          [props.className]: !!props.className,
          [this.getOpenClassName()]: isOpen,
          [this.getActiveClassName()]: props.active || (isOpen && !isInlineMode),
@@ -473,7 +486,11 @@ export class SubMenu extends React.Component {
 
       const style = {};
       if (isInlineMode) {
-         style.paddingLeft = props.inlineIndent * props.level;
+         // style.paddingLeft = props.inlineIndent * props.level;
+         //NEw:
+         if (this.props.isRtl)
+            style.paddingRight = props.inlineIndent * props.level;
+         else style.paddingLeft = props.inlineIndent * props.level;
       }
 
       let ariaOwns = {};
@@ -518,7 +535,12 @@ export class SubMenu extends React.Component {
       const getPopupContainer = props.parentMenu.isRootMenu
          ? props.parentMenu.props.getPopupContainer
          : triggerNode => triggerNode.parentNode;
-      const popupPlacement = popupPlacementMap[props.mode];
+      // const popupPlacement = popupPlacementMap[props.mode];
+      //NEw:
+      const popupPlacement = this.props.isRtl
+         ? popupPlacementMap_rtl[props.mode]
+         : popupPlacementMap[props.mode];
+
       const popupAlign = props.popupOffset ? { offset: props.popupOffset } : {};
       const popupClassName =
          props.mode === "inline" ? "" : props.popupClassName;

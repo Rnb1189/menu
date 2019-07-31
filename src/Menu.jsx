@@ -6,6 +6,9 @@ import { noop } from "./util";
 
 class Menu extends React.Component {
    static propTypes = {
+      //NEw:
+      isRtl: PropTypes.arrayOf(PropTypes.bool),
+
       defaultSelectedKeys: PropTypes.arrayOf(PropTypes.string),
       defaultActiveFirst: PropTypes.bool,
       selectedKeys: PropTypes.arrayOf(PropTypes.string),
@@ -213,7 +216,9 @@ class Menu extends React.Component {
          onDeselect: this.onDeselect,
          onSelect: this.onSelect,
          openTransitionName: this.getOpenTransitionName(),
-         parentMenu: this
+         parentMenu: this,
+         //NEw:
+         isRtl: !!this.props.isRtl
       };
       return (
          <Provider store={this.store}>

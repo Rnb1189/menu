@@ -333,6 +333,7 @@ export class SubPopupMenu extends React.Component {
       expandIcon: childProps.expandIcon || this.props.expandIcon,
       ...extraProps
     };
+
     // ref: https://github.com/ant-design/ant-design/issues/13943
     if (props.mode === "inline" || isMobileDevice()) {
       newChildProps.triggerSubMenuAction = "click";
@@ -352,6 +353,11 @@ export class SubPopupMenu extends React.Component {
       triggerSubMenuAction: this.props.triggerSubMenuAction,
       subMenuKey
     };
+
+    //NEw:
+    extraProps.isRtl = this.props.isRtl;
+    extraProps.className = this.props.isRtl ? "a-rtl" : "a-ltr";
+
     return this.renderCommonMenuItem(c, i, extraProps);
   };
 
@@ -359,6 +365,11 @@ export class SubPopupMenu extends React.Component {
     const { ...props } = this.props;
     this.instanceArray = [];
     const className = classNames(
+      //NEw:
+      {
+        "a-rtl": this.props.isRtl,
+        "a-ltr": !this.props.isRtl
+      },
       props.prefixCls,
       props.className,
       `${props.prefixCls}-${props.mode}`

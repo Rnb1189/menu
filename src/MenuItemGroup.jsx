@@ -22,11 +22,15 @@ class MenuItemGroup extends React.Component {
 
    render() {
       const { ...props } = this.props;
-      const { className = "", rootPrefixCls } = props;
+      let { className = "", rootPrefixCls } = props;
       const titleClassName = `${rootPrefixCls}-item-group-title`;
       const listClassName = `${rootPrefixCls}-item-group-list`;
       const { title, children } = props;
       menuAllProps.forEach(key => delete props[key]);
+
+      //NEw:
+      if (this.props.isRtl) className += " a-rtl";
+      else className += " a-ltr";
 
       // Set onClick to null, to ignore propagated onClick event
       delete props.onClick;

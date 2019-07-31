@@ -191,7 +191,11 @@ export class MenuItem extends React.Component {
          ...props.style
       };
       if (props.mode === "inline") {
-         style.paddingLeft = props.inlineIndent * props.level;
+         // style.paddingLeft = props.inlineIndent * props.level;
+         //NEw:
+         if (this.props.isRtl)
+            style.paddingRight = props.inlineIndent * props.level;
+         else style.paddingLeft = props.inlineIndent * props.level;
       }
       menuAllProps.forEach(key => delete props[key]);
       let icon = this.props.itemIcon;

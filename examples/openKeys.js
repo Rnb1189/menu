@@ -22,9 +22,10 @@ class Test extends React.Component {
     });
   };
 
-  getMenu() {
+  getMenu(isRtl) {
     return (
       <Menu
+        isRtl={isRtl}
         onClick={this.onClick}
         mode="inline"
         onOpenChange={this.onOpenChange}
@@ -46,7 +47,8 @@ class Test extends React.Component {
   render() {
     return (
       <div>
-        <div style={{ width: 400 }}>{this.getMenu()}</div>
+        {/* <div style={{ width: 400 }}>{this.getMenu()}</div> */}
+        <div style={{ width: 400 }}>{this.getMenu(true)}</div>
       </div>
     );
   }

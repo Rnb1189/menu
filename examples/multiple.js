@@ -56,6 +56,9 @@ function render(container) {
       <MenuItem key="4-3">outer3</MenuItem>
     </Menu>
   );
+
+  const rightMenu = React.cloneElement(leftMenu, { isRtl: true });
+
   ReactDOM.render(
     <div>
       <h2>multiple selectable menu</h2>
@@ -63,7 +66,9 @@ function render(container) {
       <p>
         <button onClick={destroy}>destroy</button>
       </p>
-      <div style={{ width: 400 }}>{leftMenu}</div>
+      <div style={{ width: 400, paddingLeft: 400 }}>{leftMenu}</div>
+      <br />
+      <div style={{ width: 400, paddingLeft: 400 }}>{rightMenu}</div>
     </div>,
     container
   );

@@ -158,6 +158,14 @@ class Demo extends React.Component {
       itemIcon,
       expandIcon
     });
+    const inlineMenu_rtl = this.renderCommonMenu({
+      isRtl: true,
+      mode: "inline",
+      defaultOpenKeys: ["1"],
+      openAnimation: animation,
+      itemIcon,
+      expandIcon
+    });
 
     return (
       <div style={{ margin: 20 }}>
@@ -167,6 +175,8 @@ class Demo extends React.Component {
           <div style={{ margin: 20, width: 200 }}>{verticalMenu}</div>
           <h3>inline</h3>
           <div style={{ margin: 20, width: 400 }}>{inlineMenu}</div>
+          <h3>inline rtl</h3>
+          <div style={{ margin: 20, width: 400 }}>{inlineMenu_rtl}</div>
         </div>
       </div>
     );
