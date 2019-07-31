@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>antd_rtl.js - example - rnb-rc-menu@7.4.29</title>
+  <title>antd_rtl.js - example - rnb-rc-menu@7.4.30</title>
   <meta name="viewport"
         content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <meta charset="utf-8"/>
@@ -263,7 +263,7 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 <body>
   <div class="container">
     <div class="header">
-      <h1>rnb-rc-menu@7.4.29</h1>
+      <h1>rnb-rc-menu@7.4.30</h1>
 
       <p>menu ui component for react</p>
     </div>
@@ -323,6 +323,15 @@ const animation = {
 
 const reactContainer = document.getElementById("__react-content");
 
+const lastSubMenu = (
+  &lt;SubMenu
+    title={&lt;span className="submenu-title-wrapper"&gt;the last&lt;/span&gt;}
+    key="4-2-0"
+  &gt;
+    &lt;MenuItem key="4-2-0-1"&gt;child of the last&lt;/MenuItem&gt;
+  &lt;/SubMenu&gt;
+);
+
 const nestSubMenu = (
   &lt;SubMenu
     title={&lt;span className="submenu-title-wrapper"&gt;offset sub menu 2&lt;/span&gt;}
@@ -379,7 +388,8 @@ const children1 = [
     disabled
   &lt;/MenuItem&gt;,
   &lt;MenuItem key="6"&gt;outer3&lt;/MenuItem&gt;,
-  nestSubMenu
+  nestSubMenu,
+  lastSubMenu
 ];
 
 const children2 = [
