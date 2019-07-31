@@ -58,7 +58,7 @@ const nestSubMenu = (
     key="4"
     popupOffset={[10, 15]}
   >
-    <MenuItem key="4-1">inner inner</MenuItem>
+    <MenuItem key="4-1">inner inner loooooooooooooong</MenuItem>
     <Divider />
     <SubMenu
       key="4-2"
@@ -102,13 +102,13 @@ const children1 = [
     <MenuItem key="1-1">0-1</MenuItem>
     <MenuItem key="1-2">0-2</MenuItem>
   </SubMenu>,
-  nestSubMenu,
   <MenuItem key="2">1</MenuItem>,
   <MenuItem key="3">outer</MenuItem>,
   <MenuItem key="5" disabled>
     disabled
   </MenuItem>,
-  <MenuItem key="6">outer3</MenuItem>
+  <MenuItem key="6">outer3</MenuItem>,
+  nestSubMenu
 ];
 
 const children2 = [

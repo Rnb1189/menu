@@ -26,7 +26,7 @@ const popupPlacementMap = {
 
 //NEw:
 const popupPlacementMap_rtl = {
-   horizontal: "bottomLeft",
+   horizontal: "bottomRight",
    vertical: "leftTop",
    "vertical-left": "rightTop",
    "vertical-right": "leftTop"

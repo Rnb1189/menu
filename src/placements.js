@@ -23,6 +23,12 @@ export const placements = {
     points: ["tl", "tr"],
     overflow: autoAdjustOverflow,
     offset: [4, 0]
+  },
+  //NEw:
+  bottomRight: {
+    points: ["tr", "br"],
+    overflow: autoAdjustOverflow,
+    offset: [0, 7]
   }
 };
 
