@@ -1,14 +1,14 @@
-webpackJsonp([9],{
+webpackJsonp([8],{
 
-/***/ 76:
+/***/ 166:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(77);
+module.exports = __webpack_require__(167);
 
 
 /***/ }),
 
-/***/ 77:
+/***/ 167:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -313,6 +313,7 @@ var CommonMenu = function (_React$Component) {
       __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
         __WEBPACK_IMPORTED_MODULE_6_rnb_rc_menu___default.a,
         {
+          isRtl: true,
           onClick: handleClick,
           triggerSubMenuAction: triggerSubMenuAction,
           onOpenChange: onOpenChange,
@@ -353,6 +354,7 @@ function render(container) {
     updateChildrenAndOverflowedIndicator: true
   });
 
+  // const verticalMenu = <CommonMenu mode="vertical" />;
   var verticalMenu = __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(CommonMenu, { mode: "vertical", openAnimation: "zoom" });
 
   var inlineMenu = __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(CommonMenu, {
@@ -363,7 +365,7 @@ function render(container) {
 
   __WEBPACK_IMPORTED_MODULE_4_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
     "div",
-    { style: { margin: 20 } },
+    { style: { margin: 20, direction: "rtl" } },
     __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
       "h2",
       null,
@@ -420,5 +422,5 @@ render(reactContainer);
 
 /***/ })
 
-},[76]);
-//# sourceMappingURL=antd.js.map
+},[166]);
+//# sourceMappingURL=antd_rtl.js.map
