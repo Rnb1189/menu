@@ -3095,7 +3095,7 @@ var popupPlacementMap = {
 
 //NEw:
 var popupPlacementMap_rtl = {
-   horizontal: "bottomLeft",
+   horizontal: "bottomRight",
    vertical: "leftTop",
    "vertical-left": "rightTop",
    "vertical-right": "leftTop"
@@ -36803,6 +36803,12 @@ var placements = {
     points: ["tl", "tr"],
     overflow: autoAdjustOverflow,
     offset: [4, 0]
+  },
+  //NEw:
+  bottomRight: {
+    points: ["tr", "br"],
+    overflow: autoAdjustOverflow,
+    offset: [0, 7]
   }
 };
 

@@ -99,7 +99,7 @@ var nestSubMenu = __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
   __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
     __WEBPACK_IMPORTED_MODULE_6_rnb_rc_menu__["Item"],
     { key: "4-1" },
-    "inner inner"
+    "inner inner loooooooooooooong"
   ),
   __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6_rnb_rc_menu__["Divider"], null),
   __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
@@ -207,7 +207,7 @@ var children1 = [__WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
     { key: "1-2" },
     "0-2"
   )
-), nestSubMenu, __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
+), __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
   __WEBPACK_IMPORTED_MODULE_6_rnb_rc_menu__["Item"],
   { key: "2" },
   "1"
@@ -223,7 +223,7 @@ var children1 = [__WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
   __WEBPACK_IMPORTED_MODULE_6_rnb_rc_menu__["Item"],
   { key: "6" },
   "outer3"
-)];
+), nestSubMenu];
 
 var children2 = [__WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
   __WEBPACK_IMPORTED_MODULE_6_rnb_rc_menu__["SubMenu"],
